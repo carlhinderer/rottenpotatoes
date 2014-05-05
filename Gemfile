@@ -46,3 +46,16 @@ end
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+
+# Cucumber Testing
+group :test, :development do
+  gem 'cucumber-rails'
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+end
+
+
+
+
