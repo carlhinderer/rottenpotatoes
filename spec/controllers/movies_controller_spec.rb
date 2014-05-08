@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe MoviesController
+describe MoviesController do
   describe 'searching TMDb' do
     before :each do
       @fake_results = [mock('movie1'), mock('movie2')]

@@ -56,6 +56,14 @@ group :test, :development do
   gem 'launchy'
 end
 
+# RSpec Testing
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'ZenTest'
+  gem 'factory_girl_rails'
+end
 
+# Gem for tmdb api
+gem 'ruby-tmdb'
 
 
