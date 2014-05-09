@@ -3,7 +3,7 @@ require 'spec_helper'
 describe MoviesController do
   describe 'searching TMDb' do
     before :each do
-      @fake_results = [mock('movie1'), mock('movie2')]
+      @fake_results = [double('movie1'), double('movie2')]
     end
     it 'should call the model method that performs TMDb search' do
       Movie.should_receive(:find_in_tmdb).with('hardware').and_return(@fake_results)
