@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  
+  # Validation
   RATINGS = %w[G PG PG-13 R NC-17]
   validates :title, :presence => true
   validates :release_date, :presence => true
@@ -11,7 +11,14 @@ class Movie < ActiveRecord::Base
       self.release_date < Date.parse('1 Jan 1930')
   end
 
+  #Lifecycle Callbacks
+  before_save :capitalize_title
+  def capitalize_title
+    self.title = self.title.split(/\s+/).map(&:downcase).
+	    map(&:capitalize).join(' ')
+  end
 
+  #Calls to TMDb
   class Movie::InvalidKeyError < StandardError ; end
 
   def self.api_key
