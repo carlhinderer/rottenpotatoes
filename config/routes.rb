@@ -6,6 +6,6 @@ Rottenpotatoes::Application.routes.draw do
   post '/movies/search_tmdb'
 
   # Login/logout
-  match 'auth/:provider/callback' => 'sessions#create', :as => 'login', :via => [:get, :post]
+  match 'auth/twitter/callback' => 'sessions#create', :as => 'login', :via => [:get, :post]
   match 'logout' => 'sessions#destroy', :via => [:get, :post]
 end
