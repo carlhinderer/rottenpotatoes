@@ -67,4 +67,5 @@ end
 # Gem for tmdb api
 gem 'ruby-tmdb'
 
-
+# OmniAuth gem for Twitter login
+gem 'omniauth-twitter'
