@@ -64,6 +64,12 @@ group :test, :development do
   gem 'simplecov', :require => false
 end
 
+# Code Quality Testing
+group :development do
+  gem 'reek'
+  gem 'metric_fu'
+end
+
 # Gem for tmdb api
 gem 'ruby-tmdb'
 
